@@ -15,14 +15,14 @@ namespace Ruanmou.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "this is About Page by caientao";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "this is Contact Page by caientao";
 
             return View();
         }

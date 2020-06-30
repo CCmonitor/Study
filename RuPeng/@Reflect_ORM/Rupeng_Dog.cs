@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _Reflect_ORM
 {
-    public class Dog
+    public class Rupeng_Dog
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -1,12 +1,14 @@
-﻿using System;
+﻿using Dapper;
+using System;
+using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Reflection;
 using System.Text;
-
 namespace _Reflect_ORM
 {
     class Orm
     {
+
         //约定：1类名和表名一样
         //2。字段名和数据库列名一样
         //3.主键的名字必须脚ID,必须是自动递增，int类型
@@ -35,7 +37,7 @@ namespace _Reflect_ORM
                     paramNames[count] = "@" + propName;
                     var sqlparameter = new SqlParameter();
                     sqlparameter.ParameterName = "@" + propName;
-                    sqlparameter.Value = propinfo.GetValue(obj);
+                    sqlparameter.Value = propinfo.GetValue(obj, null);//取obj对象的属性值
                     sqlparameters[count] = sqlparameter;
                     count++;
                 }
@@ -49,7 +51,13 @@ namespace _Reflect_ORM
             sbSQL.Append(string.Join(",", propNames)).Append(")");
             sbSQL.Append(" values(").Append(string.Join(",", paramNames)).Append(")");
 
-            SqlHelp
+            var connectionString = "Data Source=116.228.237.198;Initial Catalog=test_caientao;User ID=sa;Pwd=51530018ab!;";
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Execute(sbSQL.ToString(), new {
+                Name=111,
+                Age=20,
+            });
+            ////SqlHelp
         }
     }
 }

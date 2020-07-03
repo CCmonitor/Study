@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "@Reflect", "@Reflect\@Refle
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "@Reflect_ORM", "@Reflect_ORM\@Reflect_ORM.csproj", "{1C16E026-C1D1-4108-81B8-41E033980AB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "@ Regex", "@ Regex\@ Regex.csproj", "{D29BD4E9-E3FF-40BC-BBE2-025B8863954F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1C16E026-C1D1-4108-81B8-41E033980AB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C16E026-C1D1-4108-81B8-41E033980AB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C16E026-C1D1-4108-81B8-41E033980AB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D29BD4E9-E3FF-40BC-BBE2-025B8863954F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D29BD4E9-E3FF-40BC-BBE2-025B8863954F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D29BD4E9-E3FF-40BC-BBE2-025B8863954F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D29BD4E9-E3FF-40BC-BBE2-025B8863954F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

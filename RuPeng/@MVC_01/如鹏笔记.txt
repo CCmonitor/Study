@@ -1,0 +1,28 @@
+深拷贝和浅拷贝
+	有a,b,c 这个对象
+	浅拷贝：将a.name属性直接传给了c
+	深拷贝：先创建一个新的对象b,将a.name属性传给了b,然后将b.name传给了c
+
+结构体：
+	一种值类型，拷贝副本
+	对于结构，不像类那样存在继承，一个结构不能从另一个结构或类继承，但是结构从基类Object继承
+	struct Person
+	{
+	  public int Age{get;set;}
+	  public string Name{get;set;}
+	}
+
+值类型和引用类型：
+什么是引用类型：引用类型派生自System.Object
+什么是值类型：值类型均隐式派生自System.ValueType(ValueType其实也是继承自Object,不过是特立独行的一个分支)
+值类型有哪些：数值类型,Bool,结构体,枚举(怎么看不到int32继承自ValueType,编译器帮他完成)
+引用类型有哪些字符串、数组、类、接口等
+区别
+	引用类型变量的赋值只复制对对象的引用；引用类型在堆内存;
+	值类型变量赋值会拷贝一个副本；值类型在栈内存；值类型一定是sealed;
+	
+CTS,CLS,CLR
+CTS:Common Type System(通用数据类型)
+CLS:Common Language Specification (通用语言规范)
+CLR:Common Language Runtime(公共语言运行时)
+Common 

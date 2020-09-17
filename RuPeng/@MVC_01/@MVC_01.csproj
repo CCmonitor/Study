@@ -106,6 +106,7 @@
     <None Include="packages.config" />
     <Content Include="Views\Default\F2Show.cshtml" />
     <Content Include="Views\First\Index.cshtml" />
+    <Content Include="Views\Default\BaoMing.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

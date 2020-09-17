@@ -1,4 +1,5 @@
 ﻿using _MVC_01.Models;
+using System.Web;
 using System.Web.Mvc;
 
 namespace _MVC_01.Controllers
@@ -75,6 +76,24 @@ namespace _MVC_01.Controllers
         public ActionResult F3(string name)
         {
             return Content("名字" + name);
+        }
+        [HttpGet]
+        public ActionResult BaoMing()
+        {
+            return View();
+        }
+        /// <summary>
+        /// 保存文件
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="phoneNum"></param>
+        /// <param name="f1"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult BaoMing(string name, string phoneNum, HttpPostedFileBase f1)
+        {
+            f1.SaveAs(Server.MapPath("~/" + f1.FileName));
+            return Content("报名成功" + name + "电话号码" + phoneNum);
         }
     }
 }
